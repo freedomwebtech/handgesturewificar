@@ -56,10 +56,7 @@ while True:
         else:
             goodbye()
          
-#        if count==4:
-#            twor()
-      
-            
+
         
    
            
