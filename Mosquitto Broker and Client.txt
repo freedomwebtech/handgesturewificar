@@ -1,0 +1,19 @@
+sudo apt install -y mosquitto mosquitto-clients
+
+sudo systemctl enable mosquitto.service
+
+sudo nano /etc/mosquitto/mosquitto.conf
+
+listener 1883
+allow_anonymous true
+
+sudo reboot
+
+
+Testing MQTT Broker Installation######
+
+mosquitto -d
+
+mosquitto_sub -d -t testTopic
+
+mosquitto_pub -d -t testTopic -m "Hello world!"
