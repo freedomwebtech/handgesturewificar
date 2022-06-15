@@ -56,8 +56,10 @@ while True:
         if count==1:
             one()
         elif count==2:
-             oner()
-        else:
+             two()
+        elif count==3:
+            three()
+        elif count==5:
             goodbye()
          
 
