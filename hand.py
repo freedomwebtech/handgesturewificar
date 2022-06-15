@@ -42,7 +42,7 @@ while True:
     count += 1
     if count % 14 != 0:
         continue
-    frame=cv2.flip(frame,1)
+    frame=cv2.flip(frame,-1)
     hands,frame=detector.findHands(frame)
     if not hands:
         goodbye()
