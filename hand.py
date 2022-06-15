@@ -15,13 +15,17 @@ def one():
 
 
 
-def oner():
+def two():
     mqttBroker ="192.168.0.23"
     client = mqtt.Client("raspberry pi 401")
     client.connect(mqttBroker)
-    client.publish("test2",(bytes("oner",'utf-8')))     
+    client.publish("test2",(bytes("two",'utf-8')))     
 
-
+def three():
+    mqttBroker ="192.168.0.23"
+    client = mqtt.Client("raspberry pi 401")
+    client.connect(mqttBroker)
+    client.publish("test2",(bytes("three",'utf-8')))    
     
 
 def goodbye():
@@ -36,7 +40,7 @@ def goodbye():
 while True:
     ret,frame=cap.read()
     count += 1
-    if count % 10 != 0:
+    if count % 14 != 0:
         continue
     frame=cv2.flip(frame,1)
     hands,frame=detector.findHands(frame)
